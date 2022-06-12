@@ -1,6 +1,6 @@
 # couch_bot
 
-My last gift to RAS. Hope you choke on it.
+My last gift to RAS.
 
 Todo:
 1. Have couch_bot.py start on boot
