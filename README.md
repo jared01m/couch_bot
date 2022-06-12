@@ -9,5 +9,6 @@ Todo:
 4. Make the joystick functions in classes/couch_bot.py generic instead of using the Logitech controller values to compute math
 5. Avoid running into walls
 6. Write documentation
+7. Add code for neopixels
 
 good luck Faith
