@@ -10,10 +10,12 @@ event_device = [InputDevice(path).path for path in list_devices() if InputDevice
 max_speed = 100
 capped_speed = 100
 zero_cushion = 15
-motor_controller = "linear"
+motor_controller = "quick_descent_linear_controller"
 fixed_jerk = None
 integral_coefficient = None
 linear_step_size = 2
+descent_multiplier = None
+center = None
 closed_loop = False
 time_step = 0.01
 
@@ -31,6 +33,8 @@ couch_bot = CouchBot(
     fixed_jerk=fixed_jerk,
     integral_coefficient=integral_coefficient,
     linear_step_size=linear_step_size,
+    descent_multiplier=descent_multiplier,
+    center=center,
     closed_loop=closed_loop,
     time_step=time_step
 )

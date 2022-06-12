@@ -4,7 +4,9 @@ class MotorController(object):
     _output_value: int
     _measured_value: int
     _desired_value: int
-    _closed_loop: Optional[bool]
+    _closed_loop: bool
+    _min_cap: int
+    _max_cap: int
 
     def __init__(self, initial_value: int, closed_loop: Optional[bool]=True) -> None:
         self._output_value = initial_value

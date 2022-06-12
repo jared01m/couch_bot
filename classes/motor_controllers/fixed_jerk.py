@@ -10,16 +10,16 @@ class FixedJerkController(MotorController):
         self.__fixed_jerk = fixed_jerk
 
     def time_step_control(self) -> int:
-        if self.__closed_loop:
-            if self.__desired_value > self.__measured_value:
+        if self._closed_loop:
+            if self._desired_value > self._measured_value:
                 self.__acceleration = self.__acceleration + self.__fixed_jerk
-            elif self.__desired_value < self.__measured_value:
+            elif self._desired_value < self._measured_value:
                 self.__acceleration = self.__acceleration - self.__fixed_jerk
-            self.__output_value = self.__output_value + self.__acceleration
+            self._output_value = self._output_value + self.__acceleration
         else:
-            if self.__desired_value > self.__output_value:
+            if self._desired_value > self._output_value:
                 self.__acceleration = self.__acceleration + self.__fixed_jerk
-            elif self.__desired_value < self.__output_value:
+            elif self._desired_value < self._output_value:
                 self.__acceleration = self.__acceleration - self.__fixed_jerk
-            self.__output_value = self.__output_value + self.__acceleration
-        return self.__output_value
+            self._output_value = self._output_value + self.__acceleration
+        return self._output_value

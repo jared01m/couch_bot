@@ -13,8 +13,7 @@ class IntegralController(MotorController):
         if self._closed_loop:
             self.__error_sum = self.__error_sum + self.__coefficient * (self._measured_value - self._desired_value)
             self._output_value = self._output_value + self.__error_sum
-            return self._output_value
         else:
             self.__error_sum = self.__error_sum + self.__coefficient * (self._output_value - self._desired_value)
             self._output_value = self._output_value + self.__error_sum
-            return self._output_value
+        return self._output_value
