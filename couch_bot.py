@@ -13,7 +13,7 @@ zero_cushion = 15
 motor_controller = "linear"
 fixed_jerk = None
 integral_coefficient = None
-linear_step_size =1
+linear_step_size = 2
 closed_loop = False
 time_step = 0.01
 
