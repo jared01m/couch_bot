@@ -64,7 +64,7 @@ class CouchBot(object):
                 raise ValueError
             self.__left_motor_controller = LinearController(initial_value=initial_motor_value, step_size=linear_step_size, closed_loop=closed_loop)
             self.__right_motor_controller = LinearController(initial_value=initial_motor_value, step_size=linear_step_size, closed_loop=closed_loop)
-        elif motor_controller == "quick_descent_linear_controller":
+        elif motor_controller == "quick_descent_linear":
             if linear_step_size == None or descent_multiplier == None or center == None:
                 raise ValueError
             self.__left_motor_controller = QuickDescentLinearController(initial_value=initial_motor_value, step_size=linear_step_size, descent_multiplier=descent_multiplier, center=center, closed_loop=closed_loop)
